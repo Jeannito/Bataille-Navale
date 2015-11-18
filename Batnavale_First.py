@@ -7,11 +7,11 @@ def start():
 
 class partie:
     def  __init__(self):
-        print ('CrÃ©ation du joueur 1')
+        print ('Création du joueur 1')
         self.j1 = joueur()
         print ('Entrez les bateaux du joueur 1:')
         self.j1.construire()
-        print ('CrÃ©ation du joueur 2')
+        print ('Création du joueur 2')
         self.j2 = joueur()
         print ('Entrez les bateaux du joueur 2:')
         self.j2.construire()
@@ -35,12 +35,11 @@ class partie:
 class joueur:
     def __init__(self):
         self.bat = list
-        self.alive = [1,1,1,1,1]
-        self.bat = (bateau("Bateau de taille 4"),bateau("Bateau de taille 3"),bateau("Bateau de taille 3"),bateau("Bateau de taille 2"),bateau("Bateau de taille 1"))
+        self.bat = (bateau("Bateau de taille 1"),bateau("Bateau de taille 2"),bateau("Bateau de taille 3"),bateau("Bateau de taille 3"),bateau("Bateau de taille 4"))
 
     def construire(self):
         self.bat[0].placer_bateau(1)
-        #self.bat[1].placer_bateau(2)
+        self.bat[1].placer_bateau(2)
         #self.bat[2].placer_bateau(3)
         #self.bat[3].placer_bateau(3)
         #self.bat[4].placer_bateau(4)
@@ -55,17 +54,17 @@ class joueur:
         touch = False
         i = 0
         y = 0
-        while y != 5 and touch = False:
-            while i != 4 and touch = False:
-                if self.bat[y].liste_position[i].x == a and self.bat[y].liste_position[i].y == b :
+        while y != 5 and touch == False:
+            while i != 4 and touch == False:
+                if self.bat[y].liste_position[i].getX() == a and sself.bat[y].liste_position[i].getY() == b :
                         touch = True
-                        print("TouchÃ©")
-                        #le mieux serait de faire une fonction kill position genre self.bat[y].kill[i] qui dÃ©callerait les valeurs et qui diminuerait la taille du bateau
+                        print("Touché")
+                        #le mieux serait de faire une fonction kill position genre self.bat[y].kill[i] qui décallerait les valeurs et qui diminuerait la taille du bateau
                         self.bat[y].liste_position[i]=0
             y = y + 1
             i = i + 1
 
-        if touch == False print("CoulÃ©")
+                if touch == False : print("Coulé")
 
 
 class bateau:
@@ -98,4 +97,12 @@ class position:
     def creer_position(self, x, y):
         self.x = x
         self.y = y
+
+    def getX(self):
+        a = self.x
+        return a
+
+    def getY(self):
+        a = self.y
+        return a
 
