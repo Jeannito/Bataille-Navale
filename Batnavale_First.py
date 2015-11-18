@@ -106,3 +106,4 @@ class position:
         a = self.y
         return a
 
+start()
