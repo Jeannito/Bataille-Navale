@@ -1,0 +1,41 @@
+# Bataille-Navale
+
+Classe Partie:
+	creerPartie() -> Joueur x Joueur
+	#creation des deux ensembles de bateau (Joueur)
+
+	partieFini(joueur x joueur) -> Bool
+	#test si un  des deux ensembles de bateau est vide
+
+	tour(joueur) -> joueur
+	#lance un tour, cest a dire le joueur offensif tir sur le joueur defensif
+
+
+Classe Joueur:
+	creerJoueur() -> Joueur x grille
+	#cree une liste de bateau vide et une grille
+
+	construire(liste) -> liste
+	#ajoute 5 bateaux à la liste de bateau
+
+	detruire(liste) -> liste
+	#retire un bateau de la liste de bateau
+
+	tir(int x int x liste x grille) -> liste
+	#test si la position du tir est sur un bateau trois possibilités ("A l'eau"; "En vue"; "Touché"; "Coulé")
+
+	retirer_position(grille x liste) -> liste x grille
+	#retire la position touché dans la liste des bateaux
+
+
+Classe Bateau:
+	creer_bateau()
+	#creer un bateau sans position, et de taille 0
+
+	placer_bateau( int x liste x grille) -> grille
+	#assigne des positions occupé au bateau
+
+
+Classe Grille:
+	creer_gille():
+	#cree un tableau d'entier 20x20
